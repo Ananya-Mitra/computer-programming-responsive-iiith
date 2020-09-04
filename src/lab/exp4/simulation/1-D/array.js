@@ -75,6 +75,7 @@ window.view = {
 			var random = Math.floor(Math.random()*15)
 			this.numbers.push(String(random))
 		}
+		document.getElementById("userInput").disabled = true;
 	},
 	getUserInput: function() {
 		var inputValue = document.getElementById('userInput').value
