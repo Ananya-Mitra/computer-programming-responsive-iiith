@@ -34,11 +34,19 @@ window.view = {
  	},
 	getInput: function() {
 		var inputValue = document.getElementById('simpleLoopInput').value
+		if ( inputValue <0 || inputValue>20 )
+		 {
+		 	alert('Number should be between 0 and 20!');
+		 	return false;}
 		model.inp = Number(inputValue)
 		this.clearExecutionSection()
 	},
 	getNestedInput: function() {
 		var inputValue = document.getElementById('nestedLoopInput').value
+		if ( inputValue <0 || inputValue>20 )
+		 {
+		 	alert('Number should be between 0 and 20!');
+		 	return false;}
 		model.nestedInp = Number(inputValue)
 		this.clearExecutionSection()
 	},
@@ -108,6 +116,7 @@ window.view = {
 			this.changeClass(allChild[i].id, 'showDiv')	
 		}
 	},
+
 	hideLoop: function(loopId) {
 		var node = document.getElementById(loopId)
 		var allChild = node.childNodes
